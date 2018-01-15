@@ -1,0 +1,221 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.flex > section {
+  align-items: center;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+}
+
+.flex > section > p {
+  flex-grow: 1;
+}
+
+@media (max-width: 1600px) {
+  .flex > section {  
+    max-width: 250px;
+  }
+}
+
+.flex ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex aside {
+  width: 100%;
+}
+
+
+body {
+  font: 16px "Titillium Web", sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 400px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1600px) {
+  img{
+    width: 250px;
+  }
+}
+
+nav {
+  background: #330099;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul li a {
+  text-align: center;
+  color: #fff;
+  padding: 0.5em;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+nav ul li a:hover {
+  background: #AA80FF;
+  color: #000;
+  font-weight: 700;
+}
+
+
+h1 {
+  color: #777380;
+  font-weight: 200;
+  font-size: 35px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.flex > section {
+  background: #fff;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 4px;
+}
+a {
+  
+  border: 0;  
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;  
+  font-weight: bold;
+  font-size: 13px;
+ text-decoration:none;
+  text-transform: uppercase;
+}
+button {
+  background: #009999 url(http://i.imgur.com/RWKrr8S.png);
+  background-repeat: no-repeat;
+  background-position: 2em 50%;
+  background-size: 2em;
+  border: 0;  
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;  
+  font-weight: bold;
+  font-size: 13px;
+  padding: 1.5em 3em;
+  padding-left: 6em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #006B6B;
+  background-size: 3em;
+  background-position: 1.5em 50%;
+}
+
+.flex ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex li {
+  background: #eee;
+  font-weight: 700;
+  padding: 0.3em 0.6em;
+  border-radius: 1em;
+}
+
+
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #009999;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
